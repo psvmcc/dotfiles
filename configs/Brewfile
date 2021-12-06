@@ -1,0 +1,72 @@
+cask_args appdir: '/Applications'
+
+tap 'neovim/neovim'
+brew 'neovim', args: ['HEAD']
+
+tap 'homebrew/cask-fonts'
+cask 'font-jetbrains-mono-nerd-font'
+
+brew 'ansible'
+brew 'ansible-lint'
+brew 'black'
+brew 'flake8'
+brew 'yamllint'
+brew 'shellcheck'
+brew 'git'
+brew 'git-vendor'
+brew 'fzf'
+brew 'tmux'
+brew 'coreutils'
+brew 'curlie'
+brew 'ipcalc'
+brew 'ipv6calc'
+brew 'jq'
+brew 'mtr'
+brew 'nmap'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+brew 'readline'
+brew 'telnet'
+brew 'openstackclient'
+brew 'lazygit'
+brew 'exa'
+brew 'fish'
+brew 'ripgrep'
+brew 'bat'
+brew 'fd'
+brew 'procs'
+brew 'go'
+brew 'yarn'
+# brew 'packer'
+
+# YK
+brew 'ykclient'
+brew 'ykman'
+brew 'gnupg'
+
+#################################################
+# terminals
+cask 'iterm2'
+#
+# cask 'alacritty'
+# unusable:
+#  1. option_as_meta unsupported - https://github.com/alacritty/alacritty/issues/2017
+#  2. no tabs and no splits
+#################################################
+# cask 'kitty'
+# unusable:
+#  1. buffer search to hard and not simple
+#################################################
+
+cask 'google-chrome'
+cask 'firefox'
+cask 'cyberduck'
+cask 'docker'
+cask 'dropbox'
+cask 'viscosity'
+cask 'little-snitch'
+cask 'sublime-text'
+cask 'sublime-merge'
+cask 'vlc'
+cask 'virtualbox'
+cask 'rectangle'

@@ -1,0 +1,25 @@
+#!/bin/bash
+set -euo pipefail
+
+read() {
+	defaults read ~/Library/Preferences/com.apple.HIToolbox.plist AppleSelectedInputSources | grep "KeyboardLayout Name" | cut -f 2 -d "=" | tr -d ' ;' | tr -d '"'
+}
+
+main() {
+	LANG=$(read -r)
+	case $LANG in
+	*U.S.*)
+		echo 🇺🇸
+		;;
+	*Ukrainian*)
+		echo 🇺🇦
+		;;
+	*Russian*)
+		echo 🇷🇺
+		;;
+	*)
+		echo "${LANG}"
+	esac
+ }
+
+main

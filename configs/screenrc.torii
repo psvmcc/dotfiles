@@ -1,0 +1,22 @@
+autodetach on
+startup_message off
+vbell off
+vbell_msg "[[[ ding ]]]"
+bell "bell: %n (%t) [%w:%s]^G"
+activity "active: %n (%t) [%w:%s]"
+defutf8 on
+defscrollback 2000
+shelltitle ''
+hardstatus on
+hardstatus alwayslastline '%{= R}[%{= G}%H%{= R}] %= %{= w}%-w%{+b r}%n %t%{-b r}%{w}%-003>%+w %= %{= R}[%{c}%Y-%M-%d %{B}%c:%s%{= R}]'
+bind  ! select 11
+bind  @ select 12
+bind \# select 13
+bind  $ select 14
+bind  % select 15
+bind \^ select 16
+bind  & select 17
+bind  * select 18
+bind  ( select 19
+bind  ) select 10
+

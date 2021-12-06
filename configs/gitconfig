@@ -1,0 +1,29 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim
+	pager = bat -f -p
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[user]
+	email = mail@psvlan.com
+	name = Sergii Putko
+[alias]
+	c = commit -m
+	s = status -sb
+	b = branch --format='%(HEAD) %(color:blue)%(refname:short) %(color:yellow)%(authordate) %(color:dim green)(%(committerdate:relative)) %(color:reset)| %(color:green)%(contents:subject) %(color:dim green)[%(authorname)]' --sort=-committerdate
+	aa = add .
+	d = diff
+	dt = difftool -t vimdiff -y
+	p = pull
+    l = log --pretty=format:\"%C(red)%h %C(yellow)%ai %C(dim green)(%cr) %Creset| %C(green)%s%d %C(dim green)[%an]\" --graph --abbrev-commit -30
+	co = checkout
+	cob = checkout -b
+	corb = "!f() { \
+    	git checkout --track origin/\"$1\"; \
+	}; f"
+	last = log -1 HEAD --stat
+	delb = branch -D
+	undo = reset HEAD~1 --mixed
+	res = reset
